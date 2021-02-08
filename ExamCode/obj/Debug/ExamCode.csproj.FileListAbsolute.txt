@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\ExamCode\ExamCode\bin\Debug\ExamCode.exe.config
+C:\Users\user\source\repos\ExamCode\ExamCode\bin\Debug\ExamCode.exe
+C:\Users\user\source\repos\ExamCode\ExamCode\bin\Debug\ExamCode.pdb
+C:\Users\user\source\repos\ExamCode\ExamCode\bin\Debug\Octokit.dll
+C:\Users\user\source\repos\ExamCode\ExamCode\bin\Debug\Octokit.xml
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.LoginForm.resources
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.Properties.Resources.resources
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.csproj.GenerateResource.cache
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.csproj.CopyComplete
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.exe
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.pdb
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ExamCode\ExamCode\bin\Debug\ExamCode.exe.manifest
+C:\Users\user\source\repos\ExamCode\ExamCode\bin\Debug\ExamCode.application
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.exe.manifest
+C:\Users\user\source\repos\ExamCode\ExamCode\obj\Debug\ExamCode.application
