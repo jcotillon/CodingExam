@@ -11,13 +11,19 @@ namespace ExamCode
 {
     public class LoginController
     {
-        ILoginView _view;
+        #region Private Properties
+        private ILoginView _view;
+
         private static readonly string GitHubIdentity = Assembly
-    .GetEntryAssembly()
-    .GetCustomAttribute<AssemblyProductAttribute>()
-    .Product;
+            .GetEntryAssembly()
+            .GetCustomAttribute<AssemblyProductAttribute>()
+            .Product;
 
         private HttpResponseMessage _response = new HttpResponseMessage();
+
+        #endregion
+
+        #region Public Properties
         public HttpResponseMessage Response {
             get
             {
@@ -28,20 +34,24 @@ namespace ExamCode
                 _response = value;
             }
         }
+        #endregion
 
+        #region Methods
+
+        /// <summary>
+        /// Set controller value
+        /// </summary>
+        /// <param name="view"></param>
         public LoginController(ILoginView view)
         {
             _view = view;
             view.SetController(this);
         }
 
-        public void LoadView()
-        {
-            _view.ClearValue();
-
-        }
-
-        // Execute this method when Login button is clicked
+        /// <summary>
+        /// Execute this method when Login button is clicked
+        /// </summary>
+        /// <param name="user"></param>
         public async void LoginUser(LoginModel user)
         {
             // var productInformation = new ProductHeaderValue(GitHubIdentity);
@@ -59,6 +69,7 @@ namespace ExamCode
             _response = await client.GetAsync("/user");
         }
 
+        // TODO
         /*
         private static GitHubClient GetClient(ProductHeaderValue productInformation,
             string username, string password)
@@ -70,5 +81,6 @@ namespace ExamCode
             return client;
         }
         */
+        #endregion
     }
 }

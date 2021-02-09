@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,16 +15,27 @@ namespace ExamCode
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
-
             LoginForm loginForm = new LoginForm();
             loginForm.Visible = false;
-
             LoginController controller = new LoginController(loginForm);
-            controller.LoadView();
-            loginForm.ShowDialog();
+
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+
+            using (ServiceProvider serviceProvider = services.BuildServiceProvider())
+            {
+                var form1 = serviceProvider.GetRequiredService<LoginForm>();
+                Application.Run(loginForm);
+            }
+        }
+
+        /// <summary>
+        /// Add LoginForm to services
+        /// </summary>
+        /// <param name="services"></param>
+        private static void ConfigureServices(ServiceCollection services)
+        {
+            services.AddScoped<LoginForm>();
         }
     }
 }

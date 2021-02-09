@@ -32,8 +32,8 @@ namespace ExamCode
         private void btnLogin_Click(object sender, EventArgs e)
         {
             LoginModel user = new LoginModel() { Email = txtEmail.Text, Password = txtPassword.Text };
-            _controller.LoginUser(user);
-            this.txtValue.Text = _controller.Response.Headers?.Date?.ToString();
+            _controller?.LoginUser(user);
+            this.txtValue.Text = _controller?.Response.Headers?.Date?.ToString();
         }
 
     }
